@@ -1,9 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import My from './My'
+// import name, { secondName } from './My'
+import HelloReact from './My'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.querySelector('#wrapper'));
+
+const name = 'Radhika'
+
+// const names = ['Radhika', 'Chetan', 'Ridhi']
+
+// { } - experssion
 
 root.render(
-  <My />
+  // <h1>Hello {names} </h1> //JSX
+
+  <HelloReact name = {name} />
+
+
 );

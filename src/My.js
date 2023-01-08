@@ -1,37 +1,66 @@
-import './My.css'
-import {useState} from 'react'
+//code splitting
 
-function My(){
 
-  // const count = 0
-  // function setCount(c){
-  //   count = c
-  // }
+// const name = 'Chetan'
+// export default name;
 
-  const [count, setCount] = [0,1] //destructuring
-  
+// export const secondName = 'Aryan'
+// export const thirdName = 'ravi'
+// export const fourthName = 'Pooja'
 
-  //closure
-  function increment(){
-    setCount
-  }
+// export secondName;
 
-  //closure
-  function decrement(){
 
-  }
+// The variable 'name' is known as default export
+// The variable 'secondName' is known as named export.
 
-  // const divStyle = {
-  //   display: 'flex',
-  //   justifyContent: 'center',
-  //   alignItems: 'center'
-  // }
+// There can only one default export in a module.
+// There can be any named exports in a module.
+
+
+
+
+// const names = ['Chetan', 'Pooja', 'Ajay']
+// const names = [
+//   {
+//     fn: 'Aaryan',
+//     ln: 'Jain'
+//   },
+//   {
+//     fn: 'Abhimanyu',
+//     ln: 'Singh'
+//   }
+// ]
+// export default names
+
+
+//INLINE CSS IN REACT IS PASSED AS AN OBJECT
+
+
+function HelloReact(props) {
   return (
-    <div className="counter">
-      <button onClick={increment}> + </button>
-      <p>{count}</p>
-      <button onClick={decrement}> - </button>
-    </div>
+    <h1 style={{backgroundColor: 'red', color: 'black'}}>Hello {props.name}</h1>
   )
 }
-export default My
+
+
+
+// WHAT IS STATE?
+// WHAT IS USESTATE HOOK?
+
+
+
+
+// function HelloReact(props) {
+//   console.log(props)
+//   return (
+//     <>
+//       {
+//         props.names.map((name) => {
+//           return <h1>{name}</h1>
+//         })
+//       }
+//     </>
+//   )
+// }
+export default HelloReact

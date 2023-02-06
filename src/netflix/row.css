@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.netflix{
+  margin: 1rem;
+}
+.movies{
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.movies::-webkit-scrollbar{
+  display: none;
+}
+.movie.big img{
+  width: 150px;
+}
+.movie img{
+  width: 100px;
+  margin-right: 1rem;
+}

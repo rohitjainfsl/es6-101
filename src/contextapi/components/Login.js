@@ -1,35 +1,31 @@
 import React, { useContext } from "react";
 import LoginContext from "../LoginContext";
 
-function Form() {
-  const { setFormSubmitted, handleChange } = useContext(LoginContext);
-
+function Login() {
+  const { handleChange, setFormSubmitted } = useContext(LoginContext);
   function handleSubmit(e) {
     e.preventDefault();
     setFormSubmitted(true);
   }
-
   return (
     <>
-      <h1>Context API</h1>
-
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          name="username"
           placeholder="Enter your name"
+          name="username"
           onChange={handleChange}
-        />
+        ></input>
         <input
-          type="password"
+          type="text"
+          placeholder="Enter your password"
           name="password"
-          placeholder="Enter your Password"
           onChange={handleChange}
-        />
-        <button type="submit">Submit</button>
+        ></input>
+        <button type="submit">Login</button>
       </form>
     </>
   );
 }
 
-export default Form;
+export default Login;
